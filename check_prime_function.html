@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkPrime(value)
+    {
+        if(value<=1 || value%1!=0)
+            return false;
+        if(value==2)
+            return true;
+        for(let i=2;i<=value/2;i++)
+        {
+            if(value%i==0)return false;
+        }
+        return true;
+    }
+
+    value = +prompt("Nhap gia tri cua so can kiem tra");
+    if(checkPrime(value)){
+        document.write("la so nguyen to");
+    }else{
+        document.write("khong la so nguyen to");
+    }
+
+</script>
+</body>
+</html>
